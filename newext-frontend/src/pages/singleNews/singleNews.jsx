@@ -6,9 +6,27 @@ import Livechat from "../../components/livechat/Livechat";
 import ChatInput from "../../components/livechat/ChatInput";
 import "font-awesome/css/font-awesome.min.css";
 import "./post.css";
+import Comment from '../../components/comment/Comment'
+import CommentReply from '../../components/comment/CommentReply'
 
 // first object or news to be displayed data fetched from .json file
 const oneNews = Newsdata[0];
+
+const userCommentData = 
+[
+  {username: "manishmh0", time: "20 mins ago", comment:"Andretti would do miles better tha williams with better facilites and backing to improve them.", like: "12"},
+  {username: "manishmh1", time: "20 mins ago", comment:"Andretti would do miles better tha williams with better facilites and backing to improve them.", like: "12"},
+  {username: "manishmh4", time: "20 mins ago", comment:"Andretti would do miles better tha williams with better facilites and backing to improve them.", like: "12"},
+]
+
+const userCommentReply = 
+[
+  {username: "manishmh00", time: "20 mins ago", comment:"This is comment reply", like: "12"},
+  {username: "manishmh11", time: "20 mins ago", comment:"This is also a comment reply", like: "12"},
+]
+
+const commentSlicedItems = userCommentData.slice(0, 1);
+const commentReplySlicedItems = userCommentReply.slice(0, 1);
 
 // dividing news content into paragraphs as api provides all the news in one paragraph
 function splitString(str) {
@@ -33,50 +51,6 @@ function splitString(str) {
   return [firstSubstring, secondSubstring, thirdSubstring];
 }
 
-// user comment component
-const UserComment = ({ username, time, comment, like }) => {
-  return (
-    <>
-      <div className="user-comment_reply-container">
-        <div className="username-container">
-          <div className="username">{username}</div>
-          <div className="time">{time}</div>
-        </div>
-        <div id="user-comment_reply">in reply to manishmh</div>
-        <div className="user-comment">
-          <p>{comment}</p>
-        </div>
-        <div className="comment-interaction">
-          <div className="like">
-            Like
-            <i className="fa fa-thumbs-up"></i>
-            <div className="like-count">{like}</div>
-          </div>
-          <div className="reply">
-            Reply <i className="fa fa-reply"></i>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-// comment reply component
-function CommentReply({ username, time, comment, like }) {
-  return (
-    <>
-      <div className="user-comment_reply">
-        <UserComment
-          username={username}
-          time={time}
-          comment={comment}
-          like={like}
-        />
-      </div>
-    </>
-  );
-}
-
 const SingleNews = ({}) => {
   const [copy, setCopy] = useState(false);
   const [comment, setComment] = useState(false);
@@ -90,11 +64,9 @@ const SingleNews = ({}) => {
     await navigator.clipboard.writeText(location.href);
     setCopy(true);
   }
-
   //  word count to measure the readtime of the news
   const wordsLength = oneNews.content.split(" ").length;
   const readTime = Math.ceil(wordsLength / 183); // diving by 183 because it is the average human reading speed
-
   // calling splitSentences function to use in map function to display the paragraphs
   const splitSenteces = splitString(oneNews.content);
 
@@ -181,28 +153,17 @@ const SingleNews = ({}) => {
               )}
             </span>
           </div>
-          <UserComment
-            username="manishmh"
-            time="20 mins ago"
-            comment="Andretti would do miles better tha williams with better facilites and backing to improve them."
-            like="12"
-          />
-            <CommentReply
-              username="to the moon"
-              time="10 mins ago"
-              comment="manish build this comment section including every post in here."
-              like="2"
-            />
-          {comment && (
-            <div className="user-comment_container">
-              <UserComment
-                username="to the moon"
-                time="10 mins ago"
-                comment="manish build this comment section including every post in here."
-                like="2"
-              />
-            </div>
-          )}
+          {commentSlicedItems.map((comm) =>
+            commentReplySlicedItems.map((commReply) => 
+            <>
+              <Comment username={comm.username} time={comm.time} comment={comm.comment} like={comm.like}/>
+              <CommentReply username={commReply.username} time={commReply.time} comment={commReply.comment} like={commReply.like}/>
+            </>
+            ))}
+          {comment && 
+            userCommentData.map((comm) =>
+            <Comment username={comm.username} time={comm.time} comment={comm.comment} like={comm.like}/>
+            )}
         </div>
       </div>
       <Footer />

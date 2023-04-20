@@ -1,0 +1,136 @@
+.comment-section {
+    width: calc(754px + 12.5rem);
+    padding-left: 12.5rem;
+}
+
+.comment_input .chat-input {
+    width: 754px;
+}
+
+.comment_input .chat-input textarea {
+    height: 150px;
+}
+
+.comment_input .heading {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 4rem 0 2.4rem 0;
+}
+
+.comment_input .chat-input textarea { 
+    padding: 25px;
+}
+
+.comment_input .input-tools .emojis {
+    margin-left: 25px;
+}
+.comment_input .chat-input .input-tools {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.comment_input .chat-input .input-tools button {
+    display: none;
+}
+
+#comment-post {
+    font-size: 16px;
+    padding: 10px 42px;
+    border-radius: 7px;
+    background-color: #A66DF8;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    margin-top: 16px;
+}
+
+.view-comment {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    width: 20rem;
+    display: flex;
+    align-items: center;
+}
+
+.view-comment span i {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.username-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.username-container .username {
+    font-weight: 700;
+    color: #A66DF8;
+}
+
+.username-container .time{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+#user-comment_reply {
+    font-size: 12px;
+    margin: 7px 0 8px 0;
+    color:rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.user-comment p {
+    font-size: 16px;
+    margin-left: 0;
+}
+
+.comment-interaction {
+    display: flex;
+    font-size: 16px;
+    gap: 1rem;
+}
+
+.comment-interaction .like i, .comment-interaction .reply i {
+    margin-left: 3px
+}
+
+.comment-interaction .like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.like-count {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.user-comment_reply {
+    margin-left: 12px;
+    border-left: 2px solid #A66DF8;
+    padding-left: 12px;
+    margin-top: 16px;
+}
+
+.user-comment_reply #user-comment_reply {
+    display: block;
+}
+
+.comment-container {
+    margin-top: 2rem;
+}
+
+.users-comment_container {
+    padding-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.user-comment_reply-container {
+    margin-top: 16px;
+}

@@ -3,10 +3,17 @@ import './livechat.css'
 import ChatInput from './ChatInput'
 import 'font-awesome/css/font-awesome.min.css'
 
-
-const username = 'manishmh'
-const userchat = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.'
-const profilePicture =  'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'
+const chatData = 
+[
+    {username: 'manishmh', userchat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.', profilePicture: 'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'},
+    {username: 'manishmh', userchat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.', profilePicture: 'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'},
+    {username: 'manishmh', userchat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.', profilePicture: 'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'},
+    {username: 'manishmh', userchat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.', profilePicture: 'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'},
+    {username: 'manishmh', userchat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.', profilePicture: 'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'},
+    {username: 'manishmh', userchat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.', profilePicture: 'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'},
+    {username: 'manishmh', userchat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.', profilePicture: 'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'},
+    {username: 'manishmh', userchat: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tenetur, in aliquid nulla architecto eum.', profilePicture: 'https://i.postimg.cc/gjrHFPn4/No-Picture-Logo.png'},
+]
 
 const Chat = ({username, chat, profilePicture}) => {
     return (
@@ -33,13 +40,9 @@ const Livechat = () => {
             <h1 className="chat-wrapper_heading">Live Chat</h1>
             <hr />
             <div className="chats-container">
-                <Chat username={ username } chat={ userchat } profilePicture={ profilePicture }/>
-                <Chat username={ username } chat={ userchat } profilePicture={ profilePicture }/>
-                <Chat username={ username } chat={ userchat } profilePicture={ profilePicture }/>
-                <Chat username={ username } chat={ userchat } profilePicture={ profilePicture }/>
-                <Chat username={ username } chat={ userchat } profilePicture={ profilePicture }/>
-                <Chat username={ username } chat={ userchat } profilePicture={ profilePicture }/>
-                <Chat username={ username } chat={ userchat } profilePicture={ profilePicture }/>
+                {chatData.map((chat) => 
+                    <Chat username={ chat.username } chat={ chat.userchat } profilePicture={ chat.profilePicture }/> 
+                )}
             </div>
             <div className="chat-input_wrapper">
                 <ChatInput placeholder="Say something..."/>

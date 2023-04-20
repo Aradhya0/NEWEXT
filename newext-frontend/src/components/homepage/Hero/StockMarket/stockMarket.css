@@ -1,14 +1,14 @@
 .stockmarket {
 	width: 30.5rem;
-	height: 34.6rem;
-	background: rgba(202, 186, 226, 0.1);
+	height: 34.4rem;
+	background: rgba(168, 112, 251, 0.1);
 	border-radius: 1.2rem;
 	padding: 1.8rem 1.4rem 2.6rem 1.4rem;
 }
 
 .stockmarket-header {
-	border-bottom: 0.5px solid rgba(202, 186, 226, 0.4);
-	padding-bottom: 1.1rem; 
+	border-bottom: 0.5px solid rgba(191, 155, 245, 0.4);
+	padding-bottom: 1.1rem;
 }
 
 .stockmarket-headline {
@@ -20,8 +20,8 @@
 .stockmarket-headline h2 {
 	font-style: normal;
 	font-weight: 700;
-	font-size: 1.6rem; 
-	line-height: 2rem; 
+	font-size: 1.6rem;
+	line-height: 2rem;
 	color: #1b1425;
 	margin-bottom: 0;
 }
@@ -31,23 +31,21 @@
 }
 
 .stockmarket-heading--arrow {
-	max-width: 1.6rem; 
-	max-height: 1.6rem; 
+	max-width: 1.6rem;
+	max-height: 1.6rem;
 }
 
 /* Stock Market Tabs CSS */
 
 .tabs-container {
-	width: 27.3rem; 
-	height: 25rem; 
-	margin: 2.08rem 0.2rem 0.2rem; 
+	width: 27.3rem;
+	margin: 2.08rem 0.2rem 0.2rem;
 }
 
 .stockmarket-tabs--content {
 	display: flex;
 	justify-content: space-between;
-	height: 3.3rem; 
-	margin-bottom: 2.08rem; 
+	margin-bottom: 1.8rem;
 }
 
 /* Stock Market Tabs left side content CSS */
@@ -56,27 +54,17 @@
 	display: flex;
 }
 
-.stockmarket-tabs--logo {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 3.2rem; 
-	height: 2.77rem; 
-	border-radius: 0.7rem; 
-	margin: 0.48rem 1.28rem 0 0; 
-	background-color: #fff;
-}
-
 .stockmarket-tabs--name {
 	display: flex;
 	flex-direction: column;
+	gap: 5px;
 }
 
 .stockmarket-tabs--name h3 {
 	font-style: normal;
 	font-weight: 600;
-	font-size: 1.6rem; 
-	line-height: 2rem; 
+	font-size: 1.6rem;
+	line-height: 2rem;
 	color: #1b1425;
 	margin-bottom: 0;
 }
@@ -84,10 +72,11 @@
 .stockmarket-tabs--name p {
 	font-style: normal;
 	font-weight: 400;
-	font-size: 1rem; 
-	line-height: 1.2rem; 
+	font-size: 1rem;
+	line-height: 1.2rem;
 	color: #1b1425;
 	opacity: 0.8;
+	margin-bottom: 0;
 }
 
 /* Stock Market Tabs Right side content CSS */
@@ -95,31 +84,31 @@
 .stockmarket-tabs--right {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: flex-end;
+	justify-content: space-between;
 }
 
 .stockmarket-tabs--right p {
-	height: 1rem;
 	display: inline;
+	align-items: center;
 	font-style: normal;
 	font-weight: 400;
-	font-size: 1.2rem; 
-	line-height: 1.5rem; 
+	font-size: 1.2rem;
+	line-height: 1.2rem;
 	margin-bottom: 0;
 }
 
 .stockmarket-tabs--right h2 {
 	font-style: normal;
 	font-weight: 600;
-	font-size: 1.4rem; 
-	line-height: 1.6rem; 
+	font-size: 1.4rem;
 	color: #1b1425;
+	margin-bottom: 0;
 }
 
 .stockmarket-tabs--right---upper {
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	gap: 2px;
 }
 
 .stocks-increased-percentage {
@@ -131,7 +120,7 @@
 }
 
 .percent-arrow {
-	max-width: 1.2rem; 
+	max-width: 1.2rem;
 	max-height: 1.2rem;
 }
 
