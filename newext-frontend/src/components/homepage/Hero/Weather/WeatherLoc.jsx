@@ -8,6 +8,19 @@ export default function WeatherLoc() {
   const [date, setDate] = useState();
   const [day, setDay] = useState();
   const [month, setMonth] = useState();
+
+  const [lat, setLat] = useState([]);
+  const [long, setLong] = useState([]);
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      setLat(position.coords.latitude);
+      setLong(position.coords.longitude);
+    });
+
+    console.log(lat, long);
+  }, [lat, long]);
+
   const city = "raipur";
   const months = [
     "Jan",
@@ -49,7 +62,7 @@ export default function WeatherLoc() {
           </p>
           <div className="layout-flex--direction">
             <p className="weatherloc-weather">{result?.weather[0].main}</p>
-            <p className="weatherloc-daydate">{`${day},${date} ${month}`}</p>
+            <p className="weatherloc-daydate">{`${day}, ${date} ${month}`}</p>
           </div>
           <SunIcon className="weatherloc-icon--weather" />
         </div>
