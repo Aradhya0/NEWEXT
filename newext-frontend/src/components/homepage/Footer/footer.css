@@ -19,7 +19,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 18px;
 }
 
 
@@ -70,7 +70,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 30px;
 
   color: rgba(27, 20, 37, 1);
 }
@@ -92,21 +92,21 @@
   border: 0.5px solid rgba(107, 63, 173, 1);
 }
 
-.row h2 {
+/* .row h2 {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
   color: rgba(27, 20, 37, 1);
-}
+} */
 
 .row a {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 25px;
   color: rgba(27, 20, 37, 1);
   opacity: 0.5;
 }
