@@ -40,7 +40,7 @@ export default function WeatherLoc() {
     <div className="container-weatherloc">
       <div className="weatherloc">
         <div className="layout-flex">
-          <h6>{result?.name}</h6>
+          <h1>{result?.name}</h1>
           <ChevronRightIcon className="weatherloc-icon--more" />
         </div>
         <div className="layout-flex">
@@ -49,7 +49,7 @@ export default function WeatherLoc() {
           </p>
           <div className="layout-flex--direction">
             <p className="weatherloc-weather">{result?.weather[0].main}</p>
-            <p className="weatherloc-daydate">{`${day},${date} ${month}`}</p>
+            <p className="weatherloc-daydate">{`${day}, ${date} ${month}`}</p>
           </div>
           <SunIcon className="weatherloc-icon--weather" />
         </div>
