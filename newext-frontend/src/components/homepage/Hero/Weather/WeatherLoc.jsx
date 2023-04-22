@@ -9,19 +9,16 @@ export default function WeatherLoc() {
   const [day, setDay] = useState();
   const [month, setMonth] = useState();
 
-  const [lat, setLat] = useState([]);
-  const [long, setLong] = useState([]);
+  const [lat, setLat] = useState(20.288);
+  const [lon, setLong] = useState(85.8333);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
       setLat(position.coords.latitude);
       setLong(position.coords.longitude);
     });
+  }, [lat, lon]);
 
-    console.log(lat, long);
-  }, [lat, long]);
-
-  const city = "raipur";
   const months = [
     "Jan",
     "Feb",
@@ -40,7 +37,7 @@ export default function WeatherLoc() {
   useEffect(() => {
     const getWeatherReport = async () => {
       const { data } = await axios.get(
-        `http://localhost:9876/weather/getweather?city=${city}`
+        `http://localhost:9876/weather/getweather?lat=${lat}&lon=${lon}`
       );
       setResult(data);
       setDate(new Date().getDate());
@@ -53,12 +50,14 @@ export default function WeatherLoc() {
     <div className="container-weatherloc">
       <div className="weatherloc">
         <div className="layout-flex">
-          <h6>{result?.name}</h6>
+          <h6>
+            {result?.name}, {result?.sys.country}
+          </h6>
           <ChevronRightIcon className="weatherloc-icon--more" />
         </div>
         <div className="layout-flex">
           <p className="weatherloc-temperature">
-            {Math.floor(result?.main.temp)}&#176;
+            {Math.round(result?.main.temp)}&#176;
           </p>
           <div className="layout-flex--direction">
             <p className="weatherloc-weather">{result?.weather[0].main}</p>

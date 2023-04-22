@@ -19,7 +19,7 @@ export default function HeroCarousel() {
     <div>
       <Carousel fade className="carousel-mask">
         {dataCarousel?.slice(0, 5).map((e, index) => (
-          <Carousel.Item interval={3000}>
+          <Carousel.Item interval={3000} key={index}>
             <img src={e.image} alt="First slide" />
             <Carousel.Caption>
               <h3>{e.title}</h3>
