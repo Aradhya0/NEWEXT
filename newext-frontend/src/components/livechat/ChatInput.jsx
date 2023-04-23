@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import './livechat.css'
 
-const ChatInput = ({placeholder}) => {
-
+const ChatInput = ({placeholder, setInput }) => {
   return (
        <>
             <div className="chat-input">
@@ -10,7 +9,9 @@ const ChatInput = ({placeholder}) => {
                     <textarea 
                         // onChange={e => setValue(e.target.value)}
                         name="" id="input-area" cols="30" rows="10" 
-                        placeholder={ placeholder }>
+                        placeholder={ placeholder }
+                        onChange={e => setInput(e.target.value)}
+                    >
                     </textarea>
                     <div className="input-tools">
                         <div className="emojis">

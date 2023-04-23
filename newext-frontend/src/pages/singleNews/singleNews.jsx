@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Header from "../../components/homepage/Header/Header";
 import Footer from "../../components/homepage/Footer/Footer";
 import Newsdata from "./newsdata.json";
@@ -54,6 +54,9 @@ function splitString(str) {
 const SingleNews = ({}) => {
   const [copy, setCopy] = useState(false);
   const [comment, setComment] = useState(false);
+  const [userComment, setUserComment] = useState("")
+  const [liveChat, setLiveChat] = useState("")
+
 
   // share the news and copy link content
   let copyText;
@@ -105,7 +108,7 @@ const SingleNews = ({}) => {
             })}
           </div>
         </div>
-        <Livechat />
+        <Livechat setLiveChat={setLiveChat}/>
       </div>
       <div className="share-post">
         <h1>Share this post</h1>
@@ -139,7 +142,7 @@ const SingleNews = ({}) => {
           <div className="heading">
             Comments <i className="fa fa-angle-right"></i>
           </div>
-          <ChatInput placeholder="Post a comment" />
+          <ChatInput setUserComment={setUserComment} placeholder="Post a comment" />
           <button id="comment-post">Post</button>
         </div>
         <div className="users-comment_container">
@@ -153,16 +156,11 @@ const SingleNews = ({}) => {
               )}
             </span>
           </div>
-          {commentSlicedItems.map((comm) =>
-            commentReplySlicedItems.map((commReply) => 
-            <>
-              <Comment username={comm.username} time={comm.time} comment={comm.comment} like={comm.like}/>
-              <CommentReply username={commReply.username} time={commReply.time} comment={commReply.comment} like={commReply.like}/>
-            </>
-            ))}
+            <Comment  username={userCommentData[0].username} time={userCommentData[0].time} comment={userCommentData[0].comment} like={userCommentData[0].like}/>
+            <CommentReply username={userCommentReply[0].username} time={userCommentReply[0].time} comment={userCommentReply[0].comment} like={userCommentReply[0].like}/>
           {comment && 
             userCommentData.map((comm) =>
-            <Comment username={comm.username} time={comm.time} comment={comm.comment} like={comm.like}/>
+            <Comment key={comm} username={comm.username} time={comm.time} comment={comm.comment} like={comm.like}/>
             )}
         </div>
       </div>
