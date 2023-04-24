@@ -1,59 +1,61 @@
 .container-navbar {
-    width: 144rem;
-    padding: 3.2rem 12rem 0 12rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-
+  width: 144rem;
+  padding: 3.2rem 12rem 0 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-content {
-    width: 100%;
-    gap: 1.2rem;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    margin: 0.32rem;
+  width: 100%;
+  gap: 1.2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  margin: 0.32rem;
 }
 
 .navbar-content::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .nav-btn {
-    padding: 1.1rem 1.6rem;
-    border-radius: 1.2rem;
-    border: none;
-    flex-wrap: nowrap;
-    text-align: center;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 2.4rem;
-    color: #1B1425;
-    background-color: #Dfcefa;
-    opacity: 0.8;
+  padding: 1.1rem 1.6rem;
+  border-radius: 1.2rem;
+  border: none;
+  flex-wrap: nowrap;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  color: #1b1425;
+  background-color: #dfcefa;
+  opacity: 0.8;
 }
 
-.nav-btn:hover, .nav-btn:active {
-    border-bottom: 3px solid #6b3fad;
-    padding: 0.9rem 1.6rem;
+.nav-btn:hover,
+.nav-active {
+  border-bottom: 3px solid #6b3fad;
+  padding: 0.9rem 1.6rem;
 }
 
-.nav-btn--prev, .nav-btn--next {
-    border: none;
-    width: 6rem;
-    height: 4.6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3.2rem;
-    background-color: transparent;
+.nav-btn--prev,
+.nav-btn--next {
+  border: none;
+  width: 6rem;
+  height: 4.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3.2rem;
+  background-color: transparent;
 }
 
-.nav-btn--prev---icon, .nav-btn--next---icon {
-    width: 2.7rem;
-    height: 2rem;
-    color: #1b1425;
+.nav-btn--prev---icon,
+.nav-btn--next---icon {
+  width: 2.7rem;
+  height: 2rem;
+  color: #1b1425;
 }
