@@ -21,7 +21,6 @@
 }
 
 .chats-container {
-    overflow: scroll;
     height: 428px;
     padding-bottom: 5rem;
 }
