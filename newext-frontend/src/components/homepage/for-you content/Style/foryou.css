@@ -1,161 +1,218 @@
 .container-foryou {
-    width: 144rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .container-foryou .outer-container-foryou {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin: 5rem 11.85rem 5rem 11.85rem;
-  }
-  .container-foryou .outer-container-foryou .for-you {
-    width: 85.5rem;
-    height: 38rem;
-  }
-  .container-foryou .outer-container-foryou .for-you .heading-foryou {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .container-foryou .outer-container-foryou .for-you .heading-foryou h2 {
-    width: 9.5rem;
-    height: 2.9rem;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2.4rem;
-    line-height: 2.9rem;
-    color: #1B1425;
-    margin-right: 1.252rem;
-  }
-  .container-foryou .outer-container-foryou .for-you .inner-container-foryou {
-    margin-top: 2.4rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .container-foryou .outer-container-foryou .for-you .inner-container-foryou .inner-sub-container-foryou {
-    display: flex;
-    margin-bottom: 2.7rem;
-  }
-  .container-foryou .outer-container-foryou .for-you .inner-container-foryou .inner-sub-container-foryou .for-you-img1 {
-    width: 24.4rem;
-    height: 14rem;
-    background-image: url("../../../../assets/Rectangle.png");
-  }
-  .container-foryou .outer-container-foryou .for-you .inner-container-foryou .inner-sub-container-foryou .for-you-img2 {
-    width: 24.4rem;
-    height: 14rem;
-    background-image: url("../../../../assets/Rectangle 16.png");
-  }
-  .container-foryou .outer-container-foryou .for-you .inner-container-foryou .inner-sub-container-foryou .content {
-    margin-left: 3rem;
-    width: 57.8rem;
-  }
-  .container-foryou .outer-container-foryou .for-you .inner-container-foryou .inner-sub-container-foryou .content .headline-foryou {
-    height: 4.8rem;
-    width: inherit;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    color: #1B1425;
-  }
-  .container-foryou .outer-container-foryou .for-you .inner-container-foryou .inner-sub-container-foryou .content .summary-foryou {
-    height: 4.4rem;
-    width: inherit;
-    font-family: "Hind Madurai";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2.2rem;
-    color: #1B1425;
-    opacity: 0.8;
-    margin-top: 1.6rem;
-  }
-  .container-foryou .outer-container-foryou .for-you .inner-container-foryou .inner-sub-container-foryou .content .day-status-foryou {
-    width: 6.1rem;
-    height: 1.7rem;
-    font-family: "Hind Madurai";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-    color: #1B1425;
-    opacity: 0.7;
-    margin-top: 1.5rem;
-  }
-  .container-foryou .outer-container-foryou .quickbytes {
-    height: 38rem;
-    width: 30.5rem;
-    background-color: rgba(202, 186, 226, 0.1);
-    border-radius: 1.2rem;
-    margin-left: 4.3rem;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-heading {
-    width: 26.873rem;
-    height: 2rem;
-    margin: 2rem 2.027rem 0 1.6rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 1.2rem;
-    color: #1B1425;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-heading h2 {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.6rem;
-    line-height: 2rem;
-    color: #1B1425;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-border1 {
-    width: 27.7rem;
-    border: 0.05rem solid #cabae2;
-    align-self: center;
-    opacity: 0.4;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-headlines-content {
-    display: flex;
-    flex-direction: column;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-headlines-content .quickbytes-headlines {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 26.1rem;
-    margin: 2.4rem 2.8rem 0 1.6rem;
-    padding-bottom: 1.4rem;
-    font-family: "Montserrat";
-    font-style: normal;
-    color: #1B1425;
-    font-weight: 500;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-headlines-content .quickbytes-headlines h2 {
-    height: 2.4rem;
-    width: 1.2rem;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    margin-right: 1.6rem;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-headlines-content .quickbytes-headlines p {
-    height: 3.4rem;
-    width: 23.3rem;
-    font-size: 1.4rem;
-    line-height: 1.7rem;
-  }
-  .container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-border2 {
-    opacity: 0.4;
-    border: 0.5px solid #6b3fad;
-    width: 27.7rem;
-    align-self: center;
-  }
-  
+	width: 144rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.container-foryou .outer-container-foryou {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin: 5rem 11.85rem 5rem 11.85rem;
+}
+.container-foryou .outer-container-foryou .for-you {
+	width: 85.5rem;
+	height: 38rem;
+}
+.container-foryou .outer-container-foryou .for-you .heading-foryou {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.container-foryou .outer-container-foryou .for-you .heading-foryou h2 {
+	width: 9.5rem;
+	height: 2.9rem;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2.4rem;
+	line-height: 2.9rem;
+	color: #1b1425;
+	margin-right: 1.252rem;
+}
+.container-foryou .outer-container-foryou .for-you .inner-container-foryou {
+	margin-top: 2.4rem;
+	display: flex;
+	flex-direction: column;
+}
+.container-foryou
+	.outer-container-foryou
+	.for-you
+	.inner-container-foryou
+	.inner-sub-container-foryou {
+	display: flex;
+	margin-bottom: 2.7rem;
+}
+.container-foryou
+	.outer-container-foryou
+	.for-you
+	.inner-container-foryou
+	.inner-sub-container-foryou
+	.for-you-img1 {
+	width: 24.4rem;
+	height: 14rem;
+	background-image: url("../../../../assets/Rectangle.png");
+}
+.container-foryou
+	.outer-container-foryou
+	.for-you
+	.inner-container-foryou
+	.inner-sub-container-foryou
+	.for-you-img2 {
+	width: 24.4rem;
+	height: 14rem;
+	background-image: url("../../../../assets/Rectangle 16.png");
+}
+.container-foryou
+	.outer-container-foryou
+	.for-you
+	.inner-container-foryou
+	.inner-sub-container-foryou
+	.content {
+	margin-left: 3rem;
+	width: 57.8rem;
+}
+.container-foryou
+	.outer-container-foryou
+	.for-you
+	.inner-container-foryou
+	.inner-sub-container-foryou
+	.content
+	.headline-foryou {
+	height: 4.8rem;
+	width: inherit;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	color: #1b1425;
+}
+.container-foryou
+	.outer-container-foryou
+	.for-you
+	.inner-container-foryou
+	.inner-sub-container-foryou
+	.content
+	.summary-foryou {
+	height: 4.4rem;
+	width: inherit;
+	font-family: "Hind Madurai";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.6rem;
+	line-height: 2.2rem;
+	color: #1b1425;
+	opacity: 0.8;
+	margin-top: 1.6rem;
+}
+.container-foryou
+	.outer-container-foryou
+	.for-you
+	.inner-container-foryou
+	.inner-sub-container-foryou
+	.content
+	.day-status-foryou {
+	width: 6.1rem;
+	height: 1.7rem;
+	font-family: "Hind Madurai";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.2rem;
+	line-height: 1.7rem;
+	color: #1b1425;
+	opacity: 0.7;
+	margin-top: 1.5rem;
+}
+.container-foryou .outer-container-foryou .quickbytes {
+	height: 38rem;
+	width: 30.5rem;
+	background-color: rgba(202, 186, 226, 0.1);
+	border-radius: 1.2rem;
+	margin-left: 4.3rem;
+}
+.container-foryou .outer-container-foryou .quickbytes .quickbytes-content {
+	display: flex;
+	flex-direction: column;
+}
+.container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-heading {
+	width: 26.873rem;
+	height: 2rem;
+	margin: 2rem 2.027rem 0 1.6rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 1.2rem;
+	color: #1b1425;
+}
+.container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-heading h2 {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.6rem;
+	line-height: 2rem;
+	color: #1b1425;
+}
+.container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-border1 {
+	width: 27.7rem;
+	border: 0.05rem solid #cabae2;
+	align-self: center;
+	opacity: 0.4;
+}
+.container-foryou
+	.outer-container-foryou
+	.quickbytes
+	.quickbytes-content
+	.quickbytes-headlines-content {
+	display: flex;
+	flex-direction: column;
+}
+.container-foryou
+	.outer-container-foryou
+	.quickbytes
+	.quickbytes-content
+	.quickbytes-headlines-content
+	.quickbytes-headlines {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 26.1rem;
+	margin: 2.4rem 2.8rem 0 1.6rem;
+	padding-bottom: 1.4rem;
+	font-family: "Montserrat";
+	font-style: normal;
+	color: #1b1425;
+	font-weight: 500;
+}
+.container-foryou
+	.outer-container-foryou
+	.quickbytes
+	.quickbytes-content
+	.quickbytes-headlines-content
+	.quickbytes-headlines
+	h2 {
+	height: 2.4rem;
+	width: 1.2rem;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	margin-right: 1.6rem;
+}
+.container-foryou
+	.outer-container-foryou
+	.quickbytes
+	.quickbytes-content
+	.quickbytes-headlines-content
+	.quickbytes-headlines
+	p {
+	height: 3.4rem;
+	width: 23.3rem;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+}
+.container-foryou .outer-container-foryou .quickbytes .quickbytes-content .quickbytes-border2 {
+	opacity: 0.4;
+	border: 0.5px solid #6b3fad;
+	width: 27.7rem;
+	align-self: center;
+}
