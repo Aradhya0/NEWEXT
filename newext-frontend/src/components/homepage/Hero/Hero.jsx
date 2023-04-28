@@ -1,8 +1,8 @@
-import React from 'react'
-import HeroCarousel from './HeroCarousel/HeroCarousel'
-import WeatherLoc from './Weather/WeatherLoc'
-import StockMarketToday from './StockMarket/StockMarketToday'
-import './hero.css'
+import { React, useState, useEffect } from "react";
+import HeroCarousel from "./HeroCarousel/HeroCarousel";
+import WeatherLoc from "./Weather/WeatherLoc";
+import StockMarketToday from "./StockMarket/StockMarketToday";
+import "./hero.css";
 
 export default function Hero() {
   return (
@@ -15,5 +15,5 @@ export default function Hero() {
         </div>
       </div>
     </div>
-  )
+  );
 }

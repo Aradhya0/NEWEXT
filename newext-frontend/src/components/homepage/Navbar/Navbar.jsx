@@ -1,36 +1,34 @@
 import React, { useState } from "react";
-import './navbar.css'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
+import "./navbar.css";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export default function Navbar() {
-
-  const[scrollLeft,setScrollLeft] = useState(false);
+  const [scrollLeft, setScrollLeft] = useState(false);
 
   const scroll = (where) => {
     let box = document.getElementById("slidebox");
     let width = box.offsetWidth / 2;
-    if (where === "prev"){
+    if (where === "prev") {
       box.scrollLeft = box.scrollLeft - width;
-      if (box.scrollLeft < 600){
+      if (box.scrollLeft < 600) {
         box.scrollLeft = 0;
         setScrollLeft(false);
       } else {
         setScrollLeft(true);
       }
-    } else{
-       setScrollLeft(true);
-       box.scrollLeft = box.scrollLeft + width;
+    } else {
+      setScrollLeft(true);
+      box.scrollLeft = box.scrollLeft + width;
     }
-  }
+  };
 
   return (
     <div className="container-navbar">
-      {scrollLeft && <button 
-        className="nav-btn--prev"
-        onClick={()=>scroll("prev")}
-      >
-        <ChevronLeftIcon className="nav-btn--prev---icon" />
-      </button>}
+      {scrollLeft && (
+        <button className="nav-btn--prev" onClick={() => scroll("prev")}>
+          <ChevronLeftIcon className="nav-btn--prev---icon" />
+        </button>
+      )}
       <div className="navbar-content" id="slidebox">
         {/* {dataCarousel.map((element,index) => {
           return (
@@ -40,7 +38,7 @@ export default function Navbar() {
             >{`#${element.category}`}</button>
           )
         })} */}
-                <button className="nav-btn">#trending</button>
+        <button className="nav-btn nav-active">#trending</button>
         <button className="nav-btn">#health</button>
         <button className="nav-btn">#politics</button>
         <button className="nav-btn">#entertainment</button>
@@ -60,12 +58,9 @@ export default function Navbar() {
         <button className="nav-btn">#trending</button>
         <button className="nav-btn">#trending</button>
       </div>
-      <button 
-        className="nav-btn--next" 
-        onClick={()=>scroll("next")}
-      >
+      <button className="nav-btn--next" onClick={() => scroll("next")}>
         <ChevronRightIcon className="nav-btn--next---icon" />
       </button>
     </div>
-  )
+  );
 }

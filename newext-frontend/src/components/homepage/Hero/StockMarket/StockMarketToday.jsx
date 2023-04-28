@@ -10,9 +10,6 @@ export default function StockMarketToday() {
 		const fnc = async () => {
 			const { data } = await axios.get(`http://localhost:9876/stocks/getstocks`);
 			setdataStocks(data);
-			{
-				console.log(data);
-			}
 		};
 		fnc();
 	}, []);
