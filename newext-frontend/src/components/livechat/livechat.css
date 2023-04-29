@@ -143,4 +143,10 @@
     outline: none;
 }
 
-
+.userComment {
+    display: flex;
+    /* justify-content: flex-end; */
+    gap: 1.5rem;
+    flex-direction: row-reverse;
+    align-items: center;
+}

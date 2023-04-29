@@ -10,7 +10,7 @@ let socket;
 const Chat = ({ user, chat, profilePicture, classs }) => {
   return (
     <>
-      <div className={`individual-chat ${classs}`}>
+      <div className={`individual-chat ${ user ? 'userComment': ''} ${classs}`}>
         <div className="user-logo_wrapper">
           <div className="user-logo">
             <img src={profilePicture} alt="user-profile_logo" />
