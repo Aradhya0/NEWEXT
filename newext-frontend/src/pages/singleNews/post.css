@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .post-chat_container {
     width: 144rem;
     display: flex;
@@ -178,6 +182,33 @@
     width: calc(754px + 12.5rem);
 }
 
+#comment_input-textarea {
+    width: 100%;
+    height: 17rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    border-radius: 1rem;
+    border: none;
+    resize: none;
+    position: relative;
+    outline: none;
+}
+
+.comment-section-emojis {
+    font-size: 3rem;
+    border-radius: 1rem;
+    padding-left: 2rem;
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+
+.commentInput-container {
+    border: 1px solid black;
+    border-radius: 1rem;
+}
 /* .comment-section {
     width: calc(754px + 12.5rem);
     padding-left: 12.5rem;

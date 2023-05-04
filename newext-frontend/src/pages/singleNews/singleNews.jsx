@@ -3,11 +3,11 @@ import Header from "../../components/homepage/Header/Header";
 import Footer from "../../components/homepage/Footer/Footer";
 import Newsdata from "./newsdata.json";
 import Livechat from "../../components/livechat/Livechat";
-// import ChatInput from "../../components/livechat/ChatInput";
 import "font-awesome/css/font-awesome.min.css";
 import "./post.css";
 import Comment from "../../components/comment/Comment";
 import CommentReply from "../../components/comment/CommentReply";
+import { BsTypeBold, BsTypeItalic, BsQuote } from 'react-icons/bs'
 
 // first object or news to be displayed data fetched from .json file
 const oneNews = Newsdata[0];
@@ -76,6 +76,16 @@ const SingleNews = ({}) => {
 	const [comment, setComment] = useState(false);
 	const [userComment, setUserComment] = useState("");
 	const [liveChat, setLiveChat] = useState("");
+	const [commentStyle, setCommentStyle] = useState({
+		bold: "",
+		italic: "",
+		quote: "",
+	})
+	const [commentStyleStatus, setCommentStyleStatus] = useState({
+		bold: false,
+		italic: false,
+		quote: false,
+	})
 
 	// share the news and copy link content
 	let copyText;
@@ -161,7 +171,27 @@ const SingleNews = ({}) => {
 					<div className="heading">
 						Comments <i className="fa fa-angle-right"></i>
 					</div>
-					<ChatInput setUserComment={setUserComment} placeholder="Post a comment" />
+					<div className="commentInput-container">
+						<textarea name="comment" id="comment_input-textarea" 
+							cols="30" rows="10"
+							placeholder="Post a comment"
+							value={userComment}
+							onChange={(e) => setUserComment(e.target.value)}
+							onFocus={(e) => setCommentStyle(e.target.value)}
+						>
+						</textarea>
+						<div className="comment-section-emojis">
+							<BsTypeBold className="bold" 
+								onClick={() => setCommentStyleStatus({...commentStyleStatus, bold: !commentStyleStatus})}>
+							</BsTypeBold>
+							<BsTypeItalic className="italic"
+								onClick={() => setCommentStyleStatus({...commentStyleStatus, italic: !commentStyleStatus})}>
+							</BsTypeItalic>
+							<BsQuote className="quotation"
+								onClick={() => setCommentStyleStatus({...commentStyleStatus, quote: !commentStyleStatus})}>
+							</BsQuote>
+						</div>
+					</div>
 					<button id="comment-post">Post</button>
 				</div>
 				<div className="users-comment_container">
